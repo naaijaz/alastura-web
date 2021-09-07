@@ -1,0 +1,164 @@
+[
+    {
+        "Category": "Vegetables",
+        "Name": "eggplant",
+        "OldPrice": "7 AED/kg",
+        "NewPrice": "7 AED/KG",
+        "Details": "Approx 2kg per Pack (UAE) ",
+        "Quantity": "1",
+        "image": "eggplant.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "CARROT",
+        "OldPrice": "8 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "carrot.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "Courgette",
+        "OldPrice": "7 AED/kg",
+        "NewPrice": "5 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "cougette.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "Broccoli",
+        "OldPrice": "18 AED/kg",
+        "NewPrice": "12 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "broccoli.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "cauliflower",
+        "OldPrice": "9 AED/kg",
+        "NewPrice": "5 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "cauliflower.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "cabbage",
+        "OldPrice": "7 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "cabbage.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "onion",
+        "OldPrice": "4.5 AED/kg",
+        "NewPrice": "2.5 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "onion.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "lettuce",
+        "OldPrice": "5 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "lettuce.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "cucumber",
+        "OldPrice": "5.5 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "cucumber.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "pepper",
+        "OldPrice": "5.5 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "pepper.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "potato",
+        "OldPrice": "3.5 AED/kg",
+        "NewPrice": "2 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "potato.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "zucchini",
+        "OldPrice": "4.5 AED/kg",
+        "NewPrice": "4 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "zucchini.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "pumpkin",
+        "OldPrice": "2.5 AED/kg",
+        "NewPrice": "2 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "pumpking.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "okra",
+        "OldPrice": "11 AED/kg",
+        "NewPrice": "10 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "okra.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "tomoto",
+        "OldPrice": "3.5 AED/kg",
+        "NewPrice": "2 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "tomoto.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "garlic",
+        "OldPrice": "9.5 AED/kg",
+        "NewPrice": "8 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "garlic.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "lemon",
+        "OldPrice": "8 AED/kg",
+        "NewPrice": "7 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "lemon.jpg"
+    },
+    {
+        "Category": "Vegetables",
+        "Name": "Green Chilli",
+        "OldPrice": "5.5 AED/kg",
+        "NewPrice": "5 AED/KG",
+        "Details": "Details",
+        "Quantity": "1",
+        "image": "chilli.jpg"
+    }
+]

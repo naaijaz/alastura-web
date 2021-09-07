@@ -1,0 +1,35 @@
+<h1>Pushsplice in Angular!</h1>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="" id="" placeholder="user Name" #uname>
+        </div>
+        <div class="col-md-3"><button class="btn btn-success" (click)="onCreateUser(uname)">Create user</button></div>
+        <div class="col-md-3"><button class="btn btn-danger" (click)="onremove()">remove user</button></div>
+    </div><br><br>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>S.No</th>
+                    <th>Username</th>
+                    <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{user.name}}</td>
+                        <td><button class="btn btn-danger" (click)="onremoveitem(i)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+

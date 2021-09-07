@@ -1,0 +1,23 @@
+<p>ng-for works!</p>
+<h1>ngFor in Angular</h1>
+<div class="col-md-4">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Product Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">ID</th>
+        <th scope="col">Price</th>
+      </tr>
+
+      <tr *ngFor="let mypro of Products; index as i">
+        <td>{{i+1}}</td>
+          <td><img src="{{mypro.proimg}}" width ="50%" alt=""></td>
+          <td>{{mypro.name}}</td>
+          <td>{{mypro.id}}</td>
+          <td>{{mypro.price}}</td>
+      </tr>
+    </thead>
+    </table>
+</div>

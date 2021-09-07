@@ -1,0 +1,7 @@
+    .imgview {
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
