@@ -23,7 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import {FormsModule}  from "@angular/forms";
 
 const appRoutes:Routes=[
-{path:'', redirectTo:'home', pathMatch:'full'},
+{path:'', redirectTo:'home/products?category=Vegetable', pathMatch:'full'},
 {path:'login', component:LoginComponent},
 {path:'home', redirectTo:'home/products?category=Vegetable'},
 {path:'home', component:HomeComponent,children:[
