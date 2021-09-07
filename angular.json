@@ -17,6 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/alastura-web/",
+            "deployUrl": "/alastura-web/",
             "outputPath": "./docs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -29,7 +31,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-            
             ],
             "scripts": []
           },
