@@ -18,7 +18,7 @@ export class AppComponent {
 
   showCart = true;
 
-  cardDisplay() {
+  showHideCart() {
     this.showCart = !this.showCart;
   }
 

@@ -5,13 +5,13 @@
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </div> -->
-<div *ngIf="cart as data">
+<!-- <div *ngIf="cart as data">
     <span>Cart {{data.length}}</span>
     <div *ngFor="let item of data">
         {{item.Name}} - {{item.Quantity}}
     </div>
     <div (click)="clearCart()">Clear</div>
-</div>
+</div> -->
 <div class="d-flex justify-content-center">
     <ngb-carousel *ngIf="images">
         <ng-template ngbSlide>
