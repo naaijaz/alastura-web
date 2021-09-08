@@ -1,10 +1,9 @@
-
 <!-- <app-ng-if></app-ng-if> -->
 <!-- <app-ng-for></app-ng-for> -->
 <!-- <app-pushsplice></app-pushsplice> -->
 <div class="">
-  
-    <!-- <nav class="site-header sticky-top py-1  ">
+
+  <!-- <nav class="site-header sticky-top py-1  ">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
          <ul class="nav nav-tabs">
             <a class="navbar-brand" href="#">
@@ -20,22 +19,23 @@
         </div>
       </nav> -->
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.svg" width="200px" alt="">  
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse xd-flex xjustify-content-between" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link text-danger active"  routerLinkActive="active" routerLink="/home"><strong>Home</strong></a>
-            <a class="nav-link text-danger" routerLinkActive="active" routerLink="/aboutus"><strong>About us</strong></a>
-            <a class="nav-link text-danger"  routerLinkActive="active" routerLink="/products"><strong>Products</strong></a>
-            <a class="nav-link text-danger" routerLinkActive="active" routerLink="/contactus"><strong>Contactus</strong></a>
-          </div>
-          
-        <!-- <div class="">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.svg" width="200px" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse xd-flex xjustify-content-between" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-danger active" routerLinkActive="active" routerLink="/home"><strong>Home</strong></a>
+        <a class="nav-link text-danger" routerLinkActive="active" routerLink="/aboutus"><strong>About us</strong></a>
+        <a class="nav-link text-danger" routerLinkActive="active" routerLink="/products"><strong>Products</strong></a>
+        <a class="nav-link text-danger" routerLinkActive="active" routerLink="/contactus"><strong>Contactus</strong></a>
+      </div>
+
+      <!-- <div class="">
           <div class="d-flex justify-content-around text-white ">
             <div><i class="text-secondary fab fa-facebook-f p-2"></i></div>
             <div><i class="text-secondary fab fa-youtube p-2"></i></div>
@@ -44,13 +44,106 @@
           </div>
         </div>  -->
 
-        </div>
-      </nav>
-
-      <div class="">
-      <router-outlet></router-outlet>
     </div>
+  </nav>
 
-   <app-footer></app-footer>
+  <div class="">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+
+
+
+  <!-- shoppingcart -->
+  <div #scart id="scart" [class]="showCart?'show':'hide'" *ngIf="cart as data">
+    <div class="float-right">
+      <div class="row bg-success border-left">
+        <div class="col-lg-8 p-4 text-white">
+          <div>
+            <h4>Shopping Cart - {{data.length}}</h4>
+          </div>
+        </div>
+        <div class="col-lg-4 p-4">
+          <div class="float-right text-white"><i class="fas fa-times"></i></div>
+        </div>
+
+        <!--items list div -->
+        <div class="col-lg-12 bg-light">
+          <div (click)="clearCart()">Clear</div>
+          <div class="row p-2 border-bottom" *ngFor="let item of data">
+            <div class="col-lg-5"><img src="{{item.URL}}" width="100%" alt=""></div>
+            <div class="col-lg-5">
+              <div class="d-flex flex-column justify-content-center align-items-start">
+                <div>{{item.Name}}</div>
+                <div> <input type="number" #quantity id="quantity" name="quantity" min="1" max="10" class="px-2"
+                    value="2" width="200px"></div>
+                <div class="text-success"><strong>AED 3.99</strong></div>
+
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <div class="float-right p-2 text-muted"><i class="fas fa-times-circle"></i></div>
+            </div>
+          </div>
+        </div>
+        <!--Total calculation div -->§
+        <div class="bg-white w-100 p-4">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <div class="row d-flex justify-items-around border-bottom p-2">
+                <div class="col-lg-6">Sub total</div>
+                <div class="col-lg-6">
+                  <div class="float-right"><strong>AED 48.99</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="row d-flex justify-items-around border-bottom p-2">
+                <div class="col-lg-6">Shipping</div>
+                <div class="col-lg-6">
+                  <div class="float-right"><strong>Free</strong></div>
+                </div>
+                <div class="col-lg-6">Included Taxes</div>
+                <div class="col-lg-6">
+                  <div class="float-right"><strong>AED 2.33</strong></div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-12">
+              <div class="row d-flex justify-items-around border-bottom p-2">
+                <div class="col-lg-6">Total</div>
+
+                <div class="col-lg-6">
+                  <div class="float-right"><strong>AED 48.99</strong></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Order Form Send -->
+        <div class="bg-light p-4">
+          <div class="row ">
+            <div class="col-lg-12 p-2">
+              <input type="Name" name="" id="" value="Name" style="width: 100%;" class="border p-2 text-muted">
+            </div>
+            <div class="col-lg-12 p-2">
+              <input type="tel" name="" id="" value="+971" style="width: 100%;" class="border p-2 text-muted">
+            </div>
+            <div class="col-lg-12 p-2">
+              <button class="bg-success text-white text-uppercase border-0 p-2 w-100 "><small>Proceed to
+                  checkout</small></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- shoppingcart end -->
+
 </div>
-
