@@ -66,7 +66,7 @@ export class ProductDataService {
   }
 
   CartObserver = new BehaviorSubject([]);
-  _cart: any = [{ "Category": "Vegetables", "Name": "eggplant", "OldPrice": 7, "NewPrice": 7, "Unit": "AED/KG", "Details": "Approx 2kg per Pack (UAE) ", "Quantity": 1, "image": "Vegetables/eggplant.jpg" }];
+  _cart: any = [];
   cartKey = "CartData";
 
   // public getCart = (): Observable<any> => {
