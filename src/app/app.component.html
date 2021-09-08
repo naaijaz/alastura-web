@@ -33,6 +33,7 @@
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/aboutus"><strong>About us</strong></a>
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/products"><strong>Products</strong></a>
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/contactus"><strong>Contactus</strong></a>
+        <a class="nav-link text-danger" (click)="showHideCart()"><strong>Cart</strong></a>
       </div>
 
       <!-- <div class="">
@@ -65,20 +66,20 @@
           </div>
         </div>
         <div class="col-lg-4 p-4">
-          <div class="float-right text-white"><i class="fas fa-times"></i></div>
+          <div class="float-right text-white"><i (click)="showHideCart()" class="fas fa-times"></i></div>
         </div>
 
         <!--items list div -->
         <div class="col-lg-12 bg-light">
-          <div (click)="clearCart()">Clear</div>
+          <div class="btn-clear"(click)="clearCart()">Clear All</div>
           <div class="row p-2 border-bottom" *ngFor="let item of data">
-            <div class="col-lg-5"><img src="{{item.URL}}" width="100%" alt=""></div>
+            <div class="col-lg-5"><div class="imgview" style="background-image: url('assets/images/products/{{item.image}}');"></div></div>
             <div class="col-lg-5">
               <div class="d-flex flex-column justify-content-center align-items-start">
                 <div>{{item.Name}}</div>
                 <div> <input type="number" #quantity id="quantity" name="quantity" min="1" max="10" class="px-2"
-                    value="2" width="200px"></div>
-                <div class="text-success"><strong>AED 3.99</strong></div>
+                    value="{{item.Quantity}}" width="200px"></div>
+                <div class="text-success"><strong>AED {{item.NewPrice}}</strong></div>
 
               </div>
             </div>
@@ -87,7 +88,7 @@
             </div>
           </div>
         </div>
-        <!--Total calculation div -->§
+        <!--Total calculation div -->
         <div class="bg-white w-100 p-4">
           <div class="row">
             <div class="col-lg-12">

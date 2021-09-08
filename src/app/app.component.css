@@ -14,3 +14,23 @@ background-color: #e0e0e0;
     #scart.hide{
         display: none;
     }
+
+    .imgview {
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+.btn-clear{
+margin: 10px;
+width: 100px;
+background-color: grey;
+height: 40px;
+line-height: 40px;
+border-radius: 8px;
+color:white;
+text-align: center;
+float: right;
+    }
