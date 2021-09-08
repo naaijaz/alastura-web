@@ -100,6 +100,15 @@ export class ProductDataService {
     this.CartObserver.next(this._cart);
   }
 
+  public removeFromCart = (p: any) => {
+    //Search previously available?
+    this._cart = this._cart.filter(ca =>
+      //{ "Category": "Vegetables", "Name": "eggplant", "OldPrice": 7, "NewPrice": 7, "Unit": "AED/KG", "Details": "Approx 2kg per Pack (UAE) ", "Quantity": 1, "image": "Vegetables/eggplant.jpg" },
+      !(ca.Category == p.Category && ca.Name == p.Name && ca.Details == p.Details));
+    this.storageMap.set(this.cartKey, this._cart);
+    this.CartObserver.next(this._cart);
+  }
+
   public clearCart = () => {
     this._cart = [];
     this.storageMap.set(this.cartKey, this._cart);

@@ -31,4 +31,7 @@ export class AppComponent {
   clearCart = () => {
     this.productDataService.clearCart();
   }
+  removeFromCart = (item) => {
+    this.productDataService.removeFromCart(item);
+  }
 }
