@@ -30,8 +30,8 @@ export class ProductsComponent implements OnInit {
   getVal(Prodval: any) {
     let ProductValue: number = Prodval.innerHTML;
     this.myCart = Prodval.innerHTML;
-
-    prompt(Prodval.Name + " " + (Prodval.Quantity * Prodval.NewPrice))
+    this.productDataService.addToCart(Prodval);
+    // prompt(Prodval.Name + " " + (Prodval.Quantity * Prodval.NewPrice))
   }
 
 }

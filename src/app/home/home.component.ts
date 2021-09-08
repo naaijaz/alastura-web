@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProductDataService } from '../product-data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1920/500`);
+  cart: any = [];
+  constructor(private productDataService: ProductDataService) {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    this.productDataService.CartObserver.subscribe((cart) => {
+      this.cart = cart;
+    });
   }
-  gotoUrl = (url: string) => {
+  clearCart = () => {
+this.productDataService.clearCart();
+  }
 
-  }
 }
