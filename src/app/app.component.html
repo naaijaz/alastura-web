@@ -33,8 +33,10 @@
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/aboutus"><strong>About us</strong></a>
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/products"><strong>Products</strong></a>
         <a class="nav-link text-danger" routerLinkActive="active" routerLink="/contactus"><strong>Contactus</strong></a>
-        <a class="nav-link text-danger" (click)="showHideCart()"><strong>Cart</strong></a>
+        <div class=" bg-success text-white float-right rounded"><a class="nav-link text-white" (click)="showHideCart()"><strong><i class="fas fa-shopping-cart"></i> Cart</strong></a></div>
+      
       </div>
+     
 
       <!-- <div class="">
           <div class="d-flex justify-content-around text-white ">
@@ -46,8 +48,9 @@
         </div>  -->
 
     </div>
-  </nav>
 
+  </nav>
+  
   <div class="">
     <router-outlet></router-outlet>
   </div>
