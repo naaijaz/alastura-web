@@ -12,7 +12,8 @@ import { ProductDataService } from './product-data.service';
 export class AppComponent {
   title = 'bootpro';
   cart: any = [];
-
+  CartTotal = 0;
+  Tax = 2.33;
   constructor(private productDataService: ProductDataService) {
   }
 
@@ -26,6 +27,8 @@ export class AppComponent {
   ngOnInit(): void {
     this.productDataService.CartObserver.subscribe((cart) => {
       this.cart = cart;
+      this.CartTotal = this.productDataService.CartTotal;
+      this.Tax = this.CartTotal * 5 / 100;
     });
   }
   clearCart = () => {
@@ -33,5 +36,9 @@ export class AppComponent {
   }
   removeFromCart = (item) => {
     this.productDataService.removeFromCart(item);
+  }
+
+  updateCart(Prodval: any) {
+    this.productDataService.updateCart(Prodval);
   }
 }

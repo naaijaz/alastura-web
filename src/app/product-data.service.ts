@@ -53,6 +53,14 @@ export class ProductDataService {
 
   ];
   constructor(private storageMap: StorageHelperService) {
+    this.CartObserver.subscribe((cart) => {
+      this.CartTotal = 0;
+      for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+        this.CartTotal += item.Quantity * item.NewPrice;
+      }
+    });
+
     this.storageMap.get(this.cartKey).then((cart) => {
       if (cart)
         this._cart = cart;
@@ -66,6 +74,7 @@ export class ProductDataService {
   }
 
   CartObserver = new BehaviorSubject([]);
+  CartTotal = 0;
   _cart: any = [];
   cartKey = "CartData";
 
@@ -105,6 +114,18 @@ export class ProductDataService {
     this._cart = this._cart.filter(ca =>
       //{ "Category": "Vegetables", "Name": "eggplant", "OldPrice": 7, "NewPrice": 7, "Unit": "AED/KG", "Details": "Approx 2kg per Pack (UAE) ", "Quantity": 1, "image": "Vegetables/eggplant.jpg" },
       !(ca.Category == p.Category && ca.Name == p.Name && ca.Details == p.Details));
+    this.storageMap.set(this.cartKey, this._cart);
+    this.CartObserver.next(this._cart);
+  }
+
+  public updateCart = (p: any) => {
+    //Search previously available?
+    let curItem = this._cart.find(ca =>
+      //{ "Category": "Vegetables", "Name": "eggplant", "OldPrice": 7, "NewPrice": 7, "Unit": "AED/KG", "Details": "Approx 2kg per Pack (UAE) ", "Quantity": 1, "image": "Vegetables/eggplant.jpg" },
+      (ca.Category == p.Category && ca.Name == p.Name && ca.Details == p.Details));
+    if (curItem) {
+      curItem.Quantity = p.Quantity;
+    }
     this.storageMap.set(this.cartKey, this._cart);
     this.CartObserver.next(this._cart);
   }
